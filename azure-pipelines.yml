@@ -2,6 +2,19 @@ trigger:
 - '*'
 
 pool:
+  vmImage: 'ubuntu-20.04'
+  demands:
+  - npm
+
+variables:
+  buildConfiguration: 'Release'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  dotnetSdkVersion: '6.x'
+
+trigger:
+- '*'
+
+pool:
   vmImage: ubuntu-latest
 
 steps:
